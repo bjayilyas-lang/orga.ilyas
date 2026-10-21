@@ -66,3 +66,44 @@
 @media(max-width:650px){.dashboard-page{padding:8px}.dash-topbar{height:auto;min-height:63px;flex-wrap:wrap;padding:9px;border-radius:18px}.dash-search{flex-basis:100%;order:1;height:43px}.glass-button{flex:1;order:2;height:40px;justify-content:center}.round-top-button,.avatar{order:2;width:40px;height:40px}.dash-columns{grid-template-columns:1fr}.dash-center{order:1}.dash-right{order:2;grid-template-columns:1fr}.dash-welcome{min-height:340px}.welcome-copy{max-width:100%;padding:20px 16px 0}.welcome-copy h1{font-size:1.8rem}.welcome-copy>p:not(.dash-overline){max-width:330px;font-size:.85rem}.welcome-landscape{inset:160px 0 0}.up-next{width:65%;bottom:10%;padding:12px}.up-next strong{font-size:.8rem}.quick-filters{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}.filter-chip{min-width:0;font-size:.69rem}.dash-task-section{padding:14px 11px}.dash-task{padding:12px 9px;gap:8px}.dash-task-content h3{font-size:.82rem}.dash-calendar-card{padding:16px}.dash-calendar-grid{gap:6px}.dash-day{font-size:.8rem}.dash-day .day-dots{bottom:5px}.focus-scene{min-height:240px}.dash-progress-card{display:none}}
 @media(prefers-reduced-motion:reduce){.dashboard-page *,.custom-cursor{transition:none!important;scroll-behavior:auto!important}}
 @media (pointer:fine){body:has(.custom-cursor),body:has(.custom-cursor) a,body:has(.custom-cursor) button,body:has(.custom-cursor) [role=button]{cursor:none!important}body:has(.custom-cursor) input,body:has(.custom-cursor) textarea{cursor:text!important}}
+/* Palette plus joyeuse et cartes translucides */
+.dashboard-page {
+  background:
+    radial-gradient(ellipse at 8% 5%, #fbd9e9 0, transparent 34%),
+    radial-gradient(ellipse at 95% 12%, #d8f7ec 0, transparent 32%),
+    radial-gradient(ellipse at 80% 95%, #e7ddff 0, transparent 30%),
+    var(--bg);
+}
+
+.dash-sidebar,
+.dash-topbar,
+.dash-calendar-card,
+.dash-task-section,
+.quick-add-card,
+.dash-progress-card {
+  background: rgba(255, 255, 255, .76);
+  border: 1px solid rgba(255, 255, 255, .88);
+  box-shadow: 0 12px 32px rgba(86, 66, 133, .09);
+  backdrop-filter: blur(18px);
+}
+
+.dash-nav a.active {
+  background: linear-gradient(120deg, #ffe0ec, #eee5ff);
+  color: #a94f7a;
+}
+
+.btn-primary,
+.focus-start {
+  background: linear-gradient(120deg, #ef78a5, #a18af5);
+}
+
+.filter-chip.active {
+  background: linear-gradient(120deg, #ffe0ec, #eee5ff);
+  color: #994c83;
+}
+
+.dash-task:hover,
+.project-card:hover {
+  border-color: #e7a8cb;
+  box-shadow: 0 9px 22px rgba(190, 113, 165, .13);
+}
