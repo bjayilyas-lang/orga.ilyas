@@ -1,4 +1,10 @@
-<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#f7f4ee"><meta name="description" content="Ton espace doux pour organiser tes projets."><title>Doucement — Mon espace</title><link rel="stylesheet" href="style.css"></head><body data-page="home"><div id="app"></div><script src="app.js" defer></script></body><div id="loading-screen">
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#f7f4ee"><meta name="description" content="Ton espace doux pour organiser tes projets."><title>Doucement — Mon espace</title><link rel="stylesheet" href="style.css"></head><body data-page="home"><div id="app"></div><script src="app.js" defer></script><script>
+  window.addEventListener("load", () => {
+    setTimeout(() => {
+      document.getElementById("loading-screen")?.classList.add("loaded");
+    }, 500);
+  });
+</script></body><div id="loading-screen">
   <div class="loading-content">
     <div class="loading-heart">♡</div>
     <h2>On prépare votre petit cocon…</h2>
